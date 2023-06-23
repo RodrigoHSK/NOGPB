@@ -1,0 +1,4 @@
+,servidor,diligencia,nivel,SEI,IPL,data
+0,Rodrigo Henrique Schernovski,Intimação,1,,,22/06/2023
+1,Rodrigo Henrique Schernovski,Intimação,4,,,22/06/2023
+2,Leonardo da Silva Valenga,Intimação,2,,,22/06/2023

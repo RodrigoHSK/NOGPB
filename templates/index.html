@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escriba4H</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="#">Dados por servidor</a></li>
+        <li><a href="#">Dados por diligência</a></li>
+    </ul>
+
+    <h1> NO/DPF/GPB/PR </h1>
+
+    <div class="center">
+        <div class="main-container">
+            <form method="post" action="/update-file">
+                <div class="grid-container">
+                    <label for="servidor">Servidor:</label>
+                    <select name="servidor" id="servidor" selected="">
+                        {% for servidor in servidores %}
+                        <option value="{{servidor}}">{{servidor}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label for="diligencia">Diligência:</label>
+                    <select name="diligencia" id="diligencia">
+                        {% for diligencia in diligencias %}
+                        <option value="{{diligencia}}">{{diligencia}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label for="nivel">Nível:</label>
+                    <select name="nivel" id="nivel" style="text-align:center">
+                        {% for nv in niveis %}
+                        <option value="{{nv}}">{{nv}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label for="SEI">SEI:</label>
+                    <input type="text" name="SEI" id="SEI">
+
+
+                    <label for="IPL">IPL:</label>
+                    <input type="text" name="IPL" id="IPL">
+                </div>
+
+                <button name="encaminhar" type="submit" onclick="test()">
+                    Encaminhar
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="inside">
+        <table class="table-inputs">
+            <tr>
+                <th>Servidor</th>
+                <th>Diligência</th>
+                <th>Nível</th>
+                <th>SEI</th>
+                <th>IPL</th>
+                <th>Data</th>
+            </tr>
+
+            {% for row in entradas %}
+            <tr>
+                {% for c in row %}
+                <td> {{c}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>

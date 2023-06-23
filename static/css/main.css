@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+
+  div.main-container {
+    display:inline-block;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  div.grid-container {
+    display: inline-grid;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  div.center{
+      display: block;
+      align-items: center;
+      text-align: center;
+  }
+ 
+  div.inside2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+  }
+
+  button{
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 2px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  select{
+    text-align: center;
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  tr {
+    border: 1px solid black;
+  }
+
+  td, th {
+    padding: 10px 20px;
+  }
+
+table.table-inputs{
+  border: 1px solid black;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  text-align: center;
+}
